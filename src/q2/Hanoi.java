@@ -1,14 +1,18 @@
 package q2;
 
+
+
 public class Hanoi {
 
 	protected Tour depart, milieu, arrivee;
 
-	public Hanoi(int nb, Class C) {
+	public Hanoi(int nb, Class C) throws ErreurPile, InstantiationException, IllegalAccessException, ClassNotFoundException{
 		depart = new Tour(nb); milieu = new Tour(nb); arrivee = new Tour(nb);
-		/* initialiser la tour de depart avec nb instances de la classe
-		 * concernee
-		 */
+		try {
+			depart.remplir(nb, Class.forName(C.getName()));
+		}  catch (ErreurPile e) { 
+			throw e;
+		}  
 	}
 
 
@@ -39,4 +43,5 @@ public class Hanoi {
 			oneStep(nb-1, M, A, D);
 		}
 	}
+
 }

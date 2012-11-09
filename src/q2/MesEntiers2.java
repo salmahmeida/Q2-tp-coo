@@ -3,6 +3,9 @@ package q2;
 public class MesEntiers2 implements Empilable {
 	Integer val;
 
+	public MesEntiers2(){
+    	val=null;
+    }
 	public MesEntiers2(int v) {
 		val = v;
 	}
@@ -12,12 +15,12 @@ public class MesEntiers2 implements Empilable {
 	}
 
 	public int compareTo(Object v) {
-		MesEntiers m = (MesEntiers) v;
+		MesEntiers2 m = (MesEntiers2) v;
 		return val.compareTo(m.val);
 	}
 
 	public String toString() {
-		return "MesEntiers[" + val.intValue() +"]";
+		return "MesEntiers2[" + val.intValue() +"]";
 	}
 
 	@Override

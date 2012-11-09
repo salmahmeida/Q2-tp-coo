@@ -2,7 +2,9 @@ package q2;
 
 public class MesEntiers implements Empilable {
 	Integer val;
-
+    public MesEntiers(){
+    	val=null;
+    }
 	public void init(int nb) {
 		val = new Integer(nb);
 	}

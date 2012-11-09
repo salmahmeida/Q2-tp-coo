@@ -26,7 +26,7 @@ public class Pile {
 	// La fonction depiler ne depile que le premier element de la pile
 	public void depiler() throws ErreurPile {
 		if (this.estVide()) {
-			throw new ErreurPile("La Pile est vide !");
+			throw new ErreurPile("depilatio: La Pile est vide !");
 		}
 		this.listDisque.remove(0);
 	}
