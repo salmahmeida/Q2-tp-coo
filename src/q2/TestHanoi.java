@@ -1,4 +1,4 @@
-package exo2;
+package q2;
 import java.util.Scanner;
 
 public class TestHanoi {

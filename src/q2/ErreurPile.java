@@ -1,4 +1,4 @@
-package exo2;
+package q2;
 
 public class ErreurPile extends Exception {
 

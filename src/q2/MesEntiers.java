@@ -1,4 +1,4 @@
-package exo2;
+package q2;
 
 public class MesEntiers implements Empilable {
 	Integer val;
