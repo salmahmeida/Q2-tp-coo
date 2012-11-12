@@ -1,6 +1,11 @@
 package q2;
 
-public class MesEntiers3  {
+/* Cet Objet pourrait être un fils d'"Empilable".
+ * Cependant, il n'a pas été définit comme tel.
+ * Donc si on fait appelle à lui, il devra être rejeté.
+ */
+public class MesEntiers3 {
+	
 	Integer val;
 
 	public MesEntiers3(){

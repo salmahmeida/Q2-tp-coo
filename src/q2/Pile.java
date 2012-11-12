@@ -12,28 +12,32 @@ public class Pile {
 		this.listDisque = new ArrayList();
 	}
 
-	// Une pile ne prend pas en compte la relation d'ordre des objets !
+	/* Une pile ne prend pas en compte la relation d'ordre des objets !
+	 * Il prend en compte que sa capacité et sa hauteur.
+	 */
 	public void empiler(Object v) throws ErreurPile {
 		if (this.listDisque.size() == this.capacite) {
-			throw new ErreurPile("La Pile est pleine !");
+			throw new ErreurPile("Empilement : La Pile est pleine !");
 		}
 		else {
-			// On met l'objet sur le sommet de la pile, et non à sa queue
+			/* On met l'objet sur le sommet de la pile, et non à sa queue*/
 			this.listDisque.add(0, v);
 		}
 	}
 
-	// La fonction depiler ne depile que le premier element de la pile
+	/* La fonction "depiler()" ne depile que le premier element de la pile,
+	 * c'est-à-dire celui qui est à l'indice 0.
+	 */
 	public void depiler() throws ErreurPile {
 		if (this.estVide()) {
-			throw new ErreurPile("depilatio: La Pile est vide !");
+			throw new ErreurPile("Dépilement: La Pile est vide !");
 		}
 		this.listDisque.remove(0);
 	}
 
 	public Object sommet() throws ErreurPile {
 		if ( this.estVide() ) {
-			throw new ErreurPile("La Pile est vide !");
+			throw new ErreurPile("Sommet : La Pile est vide !");
 		}
 		return this.listDisque.get(0);
 	}
@@ -52,9 +56,11 @@ public class Pile {
 	}
 
 	/* Affiche les elements de la pile dans l'ordre en commencant par le
-	 * plus petit element
+	 * plus petit element.
+	 * NOTE : Pile ne prend pas en compte la taille des Objet qu'elle porte.
+	 * Ici, les éléments seront donc affiché que dans l'ordre où ils ont été mis
+	 * dans la liste.
 	 */
-	// Ici, n'affiche que dans l'ordre où ont été mis les éléments dans la liste
 	public void affiche () { 
 		for (int i = 0; i < this.listDisque.size(); i++) {
 			System.out.println( this.listDisque.get(i).toString());
