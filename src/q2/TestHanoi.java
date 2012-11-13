@@ -5,11 +5,13 @@ public class TestHanoi {
 	static public void main (String[] args) throws Exception {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Entrer le nom de la classe pour les objets a empiler: ");
+		/* Pour les class dans le repertoire(q2), le nom commencera tjrs par: q2.nomclass
+         * Exemple: Pour la class Disque: q2.Disque
+		 * Seuls les "Empilables" sont acceptés. Ainsi, q2.MesEntiers3 est rejetés ! */		
 		String name = scan.nextLine();
 		Hanoi h = null;
 		try {
-			h = new Hanoi(6,Class.forName(name));//pour les class dans le repertoire(q2) le nom commencera tjrs par: q2.nomclass
-			                                     // exemple: Pour la class Disque: q2.Disque
+			h = new Hanoi(6, Class.forName(name));
 		} catch (ErreurPile e) {
 			System.out.println(e.getMessage());
 		} catch (ClassCastException e) {

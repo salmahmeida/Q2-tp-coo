@@ -1,7 +1,5 @@
 package q2;
 
-
-
 public class Hanoi {
 
 	protected Tour depart, milieu, arrivee;
@@ -15,7 +13,6 @@ public class Hanoi {
 		}  
 	}
 
-
 	public void jouer() {
 		try {
 			oneStep(depart.capacite(), depart, arrivee, milieu);
@@ -28,6 +25,7 @@ public class Hanoi {
 		}
 	}
 
+	/* Affiche le contenu des trois tours */
 	public void affiche() {
 		System.out.println("Depart:"); depart.affiche();
 		System.out.println("Milieu:"); milieu.affiche();
