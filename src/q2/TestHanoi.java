@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class TestHanoi {
 	static public void main (String[] args) throws Exception {
 		Scanner scan = new Scanner(System.in);
+		System.out.println("Les classes acceptés sont des Empilable, les empilable inclus sont q2.Disque, q2.MesEntiers, q2.MesEntiers2.");
+		System.out.println("La classe q2.MesEntiers3 sera rejeté !");
 		System.out.print("Entrer le nom de la classe pour les objets a empiler: ");
 		/* Pour les class dans le repertoire(q2), le nom commencera tjrs par: q2.nomclass
          * Exemple: Pour la class Disque: q2.Disque
